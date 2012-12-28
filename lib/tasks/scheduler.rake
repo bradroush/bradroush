@@ -5,7 +5,7 @@ desc "This task is called by the Heroku scheduler add-on"
 
 task :keep_ibetya_alive => :environment do
   
-  urlString = 'http://ibetya.herokuapp.com/users'
+  urlString = 'http://ibetya.herokuapp.com/users.json'
 
   # Refresh Odds
   url = URI.parse(urlString)
