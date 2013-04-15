@@ -14,3 +14,15 @@ task :keep_ibetya_alive => :environment do
   response = http.request(request)
 
 end
+
+task :keep_appsdks_alive => :environment do
+  
+  urlString = 'http://www.appsdks.com'
+
+  # Refresh Odds
+  url = URI.parse(urlString)
+  http = Net::HTTP.new(url.host, url.port)
+  request = Net::HTTP::Get.new(url.request_uri)
+  response = http.request(request)
+
+end
